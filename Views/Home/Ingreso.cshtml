@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Ingreso";
+}
+<html>
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/Ingreso.css")" />
+</head>
+<body>
+    <!-- Formulario principal de ingreso -->
+    <form action="/Home/Ingresar" method="post">
+        <h1>Bienvenido</h1>
+        <h2>Ingresa tus Datos</h2>
+        <div>
+            <p>
+                <label>Usuario</label>
+                <input type="text" name="correo" id="correo" placeholder="correo" />
+            </p>
+            <p>
+                <label>Clave</label>
+                <input type="password" name="clave" id="clave" />
+            </p>
+        </div>
+        <p>
+            <input type="submit" value="Ingresar" />
+        </p>
+    </form>
+    <form action="/Home/Registro" method="get">
+        <p>
+            <input type="submit" value="Registrar" />
+        </p>
+    </form>
+</body>
+</html>
+
+
+
+

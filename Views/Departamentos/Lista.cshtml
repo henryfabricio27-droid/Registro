@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "ListaDepartamentos";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/StyleSheet1.css")" />
+</head>
+
+<h1>Departamentos – Lista</h1>
+
+<form method="get" action="@Url.Action("Lista","Departamentos")">
+    <label>Dept_no:</label><input type="text" name="dept_no" />
+    <label>Dept_name:</label><input type="text" name="dept_name" />
+    <input type="submit" value="Crear" />
+    <input type="submit" value="Editar" />
+    <input type="submit" value="Ver" />
+    <input type="submit" value="Desactivar" />
+</form>
+
+<table border="1">
+    <tr>
+        <th>Dept_no</th>
+        <th>Dept_name</th>
+        <th>Acciones</th>
+    </tr>
+</table>
+
+<button type="button" onclick="location.href='@Url.Action("Menu","Home")'">Volver al Menú</button>

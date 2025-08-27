@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Registro";
+}
+<html>
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/Registro.css")" />
+</head>
+<body>
+    <div class="registro-container">
+        <form class="form-registro">
+            <h1>Registro de Usuario</h1>
+            <h2>Completa tus datos personales</h2>
+
+            <!-- Fila Nombre / Apellido -->
+            <div class="fila">
+                <div>
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" placeholder="Nombre" />
+                </div>
+                <div>
+                    <label>Apellido</label>
+                    <input type="text" name="apellido" placeholder="Apellido" />
+                </div>
+            </div>
+
+            <!-- Fila Identificación / Fecha de Nacimiento -->
+            <div class="fila">
+                <div>
+                    <label>Identificación</label>
+                    <input type="text" name="identificacion" placeholder="ID" />
+                </div>
+                <div>
+                    <label>Fecha de Nacimiento</label>
+                    <input type="date" name="fechaNacimiento" />
+                </div>
+            </div>
+
+            <!-- Fila Correo / Genero -->
+            <div class="fila">
+                <div>
+                    <label>Correo</label>
+                    <input type="email" name="correo" placeholder="Correo" />
+                </div>
+                <div>
+                    <label>Genero</label>
+                    <select name="genero">
+                        <option value="">Selecciona</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Fila Contraseña -->
+            <div class="fila">
+                <div style="width:100%">
+                    <label>Contraseña</label>
+                    <input type="password" name="clave" placeholder="Contraseña" />
+                </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="botones">
+                <input type="submit" value="Registrarse" />
+                <input type="button" class="volver" value="Volver a Ingresar" onclick="location.href='/Home/Ingreso'" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+

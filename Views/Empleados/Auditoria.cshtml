@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Auditoria de Salarios";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/StyleSheet1.css")" />
+</head>
+
+<h1>Auditoría de Salarios</h1>
+
+<form method="get" action="@Url.Action("Auditoria","Empleados")">
+    <label>Fecha desde:</label><input type="date" name="fecha_inicio" />
+    <label>Fecha hasta:</label><input type="date" name="fecha_fin" />
+    <label>Usuario:</label><input type="text" name="usuario" />
+    <label>Emp_no:</label><input type="text" name="emp_no" />
+    <input type="submit" value="Ver" />
+    <input type="submit" value="Exportar" />
+</form>
+
+<table border="1">
+    <tr>
+        <th>Fecha</th>
+        <th>Usuario</th>
+        <th>Emp_no</th>
+        <th>Acción</th>
+    </tr>
+</table>
+
+<button type="button" onclick="location.href='@Url.Action("Menu","Home")'">Volver al Menú</button>
+
+

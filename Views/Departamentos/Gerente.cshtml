@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "GerenteDepartamento";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/StyleSheet1.css")" />
+</head>
+
+<h1>Gerente de Departamento</h1>
+<form method="post" action="@Url.Action("Gerente","Departamentos")">
+    <label>Dept_no:</label><input type="text" name="dept_no" required /><br />
+    <label>Emp_no (manager):</label><input type="text" name="emp_no" required /><br />
+    <label>From Date:</label><input type="date" name="from_date" required /><br />
+    <label>To Date:</label><input type="date" name="to_date" /><br />
+    <input type="submit" value="Agregar" />
+    <input type="submit" value="Editar" />
+    <input type="submit" value="Terminar Vigencia" />
+</form>
+
+<button type="button" onclick="location.href='@Url.Action("Menu","Home")'">Volver al Menú</button>

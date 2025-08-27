@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "ListaEmpleados";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/StyleSheet1.css")" />
+</head>
+
+<h1>Empleados – Lista</h1>
+
+<form method="get" action="@Url.Action("Lista","Empleados")">
+    <label>Nombre:</label><input type="text" name="nombre" />
+    <label>CI:</label><input type="text" name="ci" />
+    <label>Correo:</label><input type="text" name="correo" />
+    <input type="submit" value="Crear" />
+    <input type="submit" value="Editar" />
+    <input type="submit" value="Ver" />
+    <input type="submit" value="Desactivar" />
+</form>
+
+<table border="1">
+    <tr>
+        <th>Emp_no</th>
+        <th>CI</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+    </tr>
+    <!-- Aquí se llenarán los empleados desde la base de datos -->
+</table>
+
+<button type="button" onclick="location.href='@Url.Action("Menu","Home")'">Volver al Menú</button>

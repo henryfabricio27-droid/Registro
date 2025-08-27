@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "FormularioDepartamentos";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/StyleSheet1.css")" />
+</head>
+<h1>Formulario de Departamento</h1>
+<form method="post" action="@Url.Action("Formulario","Departamentos")">
+    <label>Dept_no:</label><input type="text" name="dept_no" required /><br />
+    <label>Dept_name:</label><input type="text" name="dept_name" required /><br />
+    <input type="submit" value="Guardar" />
+    <input type="reset" value="Cancelar" />
+</form>
+
+<button type="button" onclick="location.href='@Url.Action("Menu","Home")'">Volver al Menú</button>
