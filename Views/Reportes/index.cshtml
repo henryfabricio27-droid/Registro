@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Reportes";
+  
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/StyleSheet1.css")" />
+</head>
+
+<div class="container">
+    <h1>Reportes</h1>
+
+    <form method="post" action="@Url.Action("Generar", "Reportes")">
+        <label>Dept_no:</label>
+        <input type="text" name="dept_no" />
+
+        <label>Fecha Inicio:</label>
+        <input type="date" name="fechaInicio" />
+
+        <label>Fecha Fin:</label>
+        <input type="date" name="fechaFin" />
+
+        <input type="submit" value="Exportar PDF" />
+        <input type="submit" value="Exportar WORD" />
+    </form>
+
+    <table>
+        <tr>
+            <th>Dept_no</th>
+            <th>Nombre Departamento</th>
+            <th>Empleado</th>
+            <th>Fecha</th>
+            <th>Acción</th>
+        </tr>
+        <!-- Aquí se llenan los datos filtrados -->
+    </table>
+
+    <button type="button" onclick="location.href='@Url.Action("Menu", "Home")'">Volver al Menú</button>
+    
+</div>

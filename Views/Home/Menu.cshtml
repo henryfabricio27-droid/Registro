@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Menú Principal";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/StyleSheet1.css")" />
+</head>
+
+<h1>Bienvenido @Session["usuario"]</h1>
+
+<h2>Selecciona una opción:</h2>
+<ul>
+    <li><a href="@Url.Action("Dashboard", "Empleados")">Dashboard</a></li>
+    <li><a href="@Url.Action("Lista", "Empleados")">Empleados – Lista</a></li>
+    <li><a href="@Url.Action("Formulario", "Empleados")">Empleados – Formulario</a></li>
+    <li><a href="@Url.Action("Lista", "Departamentos")">Departamentos – Lista</a></li>
+    <li><a href="@Url.Action("Formulario", "Departamentos")">Departamentos – Formulario</a></li>
+    <li><a href="@Url.Action("Asignacion", "Departamentos")">Asignacion a Departamento</a></li>
+    <li><a href="@Url.Action("Gerente", "Departamentos")">Gerente de Departamento</a></li>
+    <li><a href="@Url.Action("Titulos", "Empleados")">Titulos</a></li>
+    <li><a href="@Url.Action("Salarios", "Empleados")">Salarios</a></li>
+    <li><a href="@Url.Action("Auditoria", "Empleados")">Auditoria de Salarios</a></li>
+    <li><a href="@Url.Action("Index", "Reportes")">Reportes</a></li>
+</ul>
+<button type="button" onclick="location.href='@Url.Action("Logout", "Home")'">Cerrar Sesión</button>
+
+

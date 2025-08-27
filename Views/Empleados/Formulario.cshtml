@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "FormularioEmpleados";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/StyleSheet1.css")" />
+</head>
+
+<h1>Formulario de Empleado</h1>
+<form method="post" action="@Url.Action("Formulario","Empleados")">
+    <label>Emp_no:</label><input type="text" name="emp_no" required /><br />
+    <label>CI:</label><input type="text" name="ci" required /><br />
+    <label>Birth Date:</label><input type="date" name="birth_date" required /><br />
+    <label>First Name:</label><input type="text" name="first_name" required /><br />
+    <label>Last Name:</label><input type="text" name="last_name" required /><br />
+    <label>Gender:</label>
+    <select name="gender">
+        <option>Masculino</option>
+        <option>Femenino</option>
+    </select><br />
+    <label>Hire Date:</label><input type="date" name="hire_date" required /><br />
+    <label>Correo:</label><input type="email" name="correo" required /><br />
+    <input type="submit" value="Guardar" />
+    <input type="reset" value="Cancelar" />
+</form>
+
+<button type="button" onclick="location.href='@Url.Action("Menu","Home")'">Volver al Menú</button>
