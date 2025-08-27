@@ -1,3 +1,5 @@
+******** POR FAVOR USE LA VERSION ESTABLE******
+
 El sistema de nomina para ingreso y registro de usuario o empleados, esta destinado
 para llevar un control riguroso de los empleados.
 
